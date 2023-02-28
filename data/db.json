@@ -1,0 +1,16 @@
+{
+    "blogs": [
+        {
+            "title": "My new website", 
+            "body": "Lero lero",
+            "author": "Mario", 
+            "id": 1
+        },
+        {
+            "title": "Opening party!", 
+            "body": "Lero lero", 
+            "author": "Yoshi", 
+            "id": 2
+        }
+    ]
+}

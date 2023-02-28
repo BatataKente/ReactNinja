@@ -1,0 +1,27 @@
+{
+    "globals": {
+        "fetch": "readonly",
+        "console": "readonly",
+        "module": "readonly",
+        "document": "readonly",
+        "setTimeout": "readonly",
+        "expect": "readonly",
+        "test": "readonly"
+    },
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "ecmaFeatures": {"jsx": true},
+        "sourceType": "module"
+    },
+    "rules": {
+        "no-unsafe-negation": "error",
+        "no-unused-vars": ["warn", {"varsIgnorePattern": "^[A-Z]"}],
+        "no-console": "warn",
+        "no-dupe-keys": "error", 
+        "no-extra-semi": "warn",
+        "eqeqeq": ["error", "smart"], 
+        "curly": "off", 
+        "no-param-reassign": "off",
+        "no-undef": "error"
+    }
+}
