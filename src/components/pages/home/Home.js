@@ -1,19 +1,13 @@
-import {useEffect, useState} from 'react'
-import {BlogList} from '../../blogList/BlogList'
+import {BlogList} from './blogList/BlogList'
+import {useFetch} from '../../../Utils'
 
 export function Home() {
-    const [blogs, setBlogs] = useState(null)
-    useEffect(
-        () => {
-            fetch("http://localhost:8000/blogs")
-            .then(response => response.json())
-            .then(data => setBlogs(data))
-            .catch(error => console.log(error))
-        }, []
-    )
+    const {error, isLoading, data} = useFetch("http://localhost:8000/blogs")
     return(
         <div className="home">
-            <BlogList blogs={blogs} title="All Blogs!"/>
+            {error && <div>{error}</div>}
+            {isLoading && <div>Loading...</div>}
+            <BlogList blogs={data} title="All Blogs!"/>
         </div>
     )
 }
